@@ -277,7 +277,7 @@ Esta mensagem será apagada em 3 dias. Caso desejar rever os comandos após a ex
     if message.content.lower() == prefixo + 'cargo':
         embedMessage = discord.Embed(color=colorg, description=(
             message.author.name + ' agora você é veloz e furioso'))
-        role = message.author.guild.get_role(940782603311648809)
+        role = message.author.guild.get_role(  ) # role here
         await message.author.add_roles(role)
         embedMessage.set_image(
             url='https://media.discordapp.net/attachments/660977416176533548/743276560022503564/1504828085_WpRpnj.gif')
@@ -289,7 +289,7 @@ async def on_member_join(member):
     embedmessage = discord.Embed(color=colorp, description=(
         member.mention + random.choice(welcomer)))
     embedmessage.set_thumbnail(url=member.avatar_url)
-    welcome = client.get_channel(801477653545877536)
+    welcome = client.get_channel(  ) # channel here
     await welcome.send(embed=embedmessage)
 
 
@@ -298,8 +298,8 @@ async def on_member_remove(member):
     embedmessage = discord.Embed(
         color=colorp, description=(member.mention + random.choice(goodbyer)))
     embedmessage.set_thumbnail(url=member.avatar_url)
-    goodbye = client.get_channel(801477653545877536)
+    goodbye = client.get_channel(  ) # channel here
     await goodbye.send(embed=embedmessage)
 
 
-client.run('OTQwNzc2NjYxMjIwMjA4NzEx.YgMUig.O29JcWDUnNbvVBo10fDr2X-56Dc')
+client.run('  ') # bot's token here
